@@ -1,0 +1,40 @@
+@import "../node_modules/modern-normalize/modern-normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import "../node_modules/.pnpm/react-datepicker@8.4.0_react-dom@19.1.0_react@19.1.0__react@19.1.0/node_modules/react-datepicker/dist/react-datepicker.css";
+
+body {
+  display: flex;
+  font-family: var(--font-family), serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-content: center;
+  box-sizing: border-box;
+}
+:root {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  --main: #101828;
+  --text: #475467;
+  --white: #fff;
+  --inputs: #f7f7f7;
+  --badges: #f2f4f7;
+  --gray: #6c717b;
+  --gray-light: #dadde1;
+  --button: #e44848;
+  --button-hover: #d84343;
+  --rating: #ffc531;
+  --font-family: "Inter", sans-serif;
+}
+.react-datepicker-wrapper{
+  width: 100%;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+button {
+  cursor: pointer;
+}

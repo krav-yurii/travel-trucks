@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  padding: 24px;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  max-width: 888px;
+  border: 1px solid var(--gray-light);
+  background: var(--white);
+}
+.image {
+  width: 292px;
+  height: 320px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.info {
+  display: flex;
+  width: 524px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.subheader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.rating, .location, .headerRightPart{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.starIcon {
+  color: var(--rating);
+}
+
+.description {
+  display: -webkit-box;
+  width: 525px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: var(--text);
+  line-height: 24px;
+}
+
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.favoriteButton{
+  width: 24px;
+  height: 24px;
+}
+
+.likeIconActive {
+  width: 24px;
+  height: 24px;
+  color: var(--button);
+}
+
+
+

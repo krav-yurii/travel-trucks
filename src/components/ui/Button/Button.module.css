@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    padding: 16px 60px;
+    border-radius: 200px;
+    border: 0;
+    background: var(--button);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.08px;
+}
+.button:hover {
+    background-color: var(--button-hover);
+}
+.button:disabled {
+    background-color: gainsboro;
+    cursor: not-allowed;
+}
