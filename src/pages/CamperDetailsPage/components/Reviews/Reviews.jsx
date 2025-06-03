@@ -1,5 +1,7 @@
 import React from 'react';
 import css from './Reviews.module.css';
+import blankStarIcon from '@assets/ico-star-blank.svg';
+import starIcon from '@assets/ico-star.svg';
 
 export default function Reviews({ reviews }) {
   return (
@@ -14,13 +16,7 @@ export default function Reviews({ reviews }) {
                   <p className={css.name}>{review.reviewer_name}</p>
                   <div className={css.rating}>
                     {[...Array(5)].map((_, i) => (
-                      <img
-                        key={i}
-                        src={
-                          i < review.reviewer_rating ? `/assets/ico-star.svg` : `/assets/ico-star-blank.svg`
-                        }
-                        alt={'icon'}
-                      />
+                      <img key={i} src={i < review.reviewer_rating ? starIcon : blankStarIcon} alt={'icon'} />
                     ))}
                   </div>
                 </div>

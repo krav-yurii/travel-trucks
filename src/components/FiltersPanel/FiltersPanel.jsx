@@ -5,9 +5,13 @@ import { setFilters } from '@store/filters/filters-slice.js';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFilters } from '@store/filters/filters-selectors.js';
 import Button from '@components/ui/Button';
+import locationIcon from '@assets/ico-map.svg';
+
 import css from './FiltersPanel.module.css';
 
 const FiltersPanel = () => {
+  const icons = import.meta.glob('/assets/filterIcons/*.svg', { eager: true });
+
   const dispatch = useDispatch();
   const filters = useSelector(selectFilters);
 
@@ -33,7 +37,7 @@ const FiltersPanel = () => {
               Location
             </label>
             <div className={css.inputWrapper}>
-              <img src={`/assets/ico-map.svg`} alt={'icon'} className={css.locationIcon} />
+              <img src={locationIcon} alt={'icon'} className={css.locationIcon} />
               <Field
                 type="text"
                 id="location"
@@ -57,7 +61,11 @@ const FiltersPanel = () => {
                     className={css.hiddenInput}
                   />
                   <div className={css.item}>
-                    <img src={`/assets/filterIcons/${iconPath}`} alt={text} className={css.icon} />
+                    <img
+                      src={icons[`/assets/filterIcons/${iconPath}`]?.default}
+                      alt={text}
+                      className={css.icon}
+                    />
                     <span>{text}</span>
                   </div>
                 </label>
@@ -88,7 +96,11 @@ const FiltersPanel = () => {
                     )}
                   </Field>
                   <div className={css.item}>
-                    <img src={`/assets/filterIcons/${iconPath}`} alt={text} className={css.icon} />
+                    <img
+                      src={icons[`/assets/filterIcons/${iconPath}`]?.default}
+                      alt={text}
+                      className={css.icon}
+                    />
                     <span>{text}</span>
                   </div>
                 </label>

@@ -7,6 +7,9 @@ import { catalogRoutesPath } from '@router/routes/catalog/catalog-routes-path.js
 import CamperFeaturesChips from '@components/CamperFeaturesChips';
 import Rating from '@components/ui/Rating';
 import Location from '@components/ui/Location';
+import favoritePressedIcon from '@assets/ico-favorite-pressed.svg';
+import favoriteIcon from '@assets/ico-favorite.svg';
+
 import Button from '@components/ui/Button';
 import { formatPrice } from '@/shared/utils/formatPrice.js';
 import css from './CamperCard.module.css';
@@ -43,9 +46,9 @@ const CamperCard = ({ camper }) => {
               {formatPrice(camper.price)}
               <button className={css.favoriteButton} onClick={handleFavoriteClick}>
                 {isFavorite ? (
-                  <img src={`/assets/ico-favorite-pressed.svg`} alt={'icon'} className={css.likeIconActive} />
+                  <img src={favoritePressedIcon} alt={'icon'} className={css.likeIconActive} />
                 ) : (
-                  <img src={`/assets/ico-favorite.svg`} alt={'icon'} className={css.likeIconActive} />
+                  <img src={favoriteIcon} alt={'icon'} className={css.likeIconActive} />
                 )}
               </button>
             </p>
